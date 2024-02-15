@@ -14,7 +14,7 @@
 
     </head>
     <body>
-        <div class="content">
+        <div class="content"> fddf
             <?php include 'componentes/header/controller.php'; 	// Cabecera ?>
             
             <?php echo loader($componente);?>
