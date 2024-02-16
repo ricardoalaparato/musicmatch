@@ -1,5 +1,6 @@
 {
     "require": {
-        "monolog/monolog": "^3.5"
+        "monolog/monolog": "^3.5",
+        "twbs/bootstrap": "5.0.2"
     }
 }
