@@ -4,7 +4,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
             <img src="img/logos/musicmatch.svg" alt="Logo" width="70" height="70" class="d-inline-block rounded-circle"></a>
-            <nav class="nav nav-pills nav-justified">
+            <nav class="nav nav-justified">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">Contacto</a>
                 <a class="nav-link" href="#">Login</a>
