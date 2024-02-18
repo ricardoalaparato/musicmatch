@@ -9,7 +9,7 @@
         <meta charset="utf-8">  
         <base href="/musicmatch/">   
         <!-- <link href="img/favicon-32x32.png" rel="icon"> TODO-->  
-        <link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" > <!-- BOOTSTRAP 5.3.2. -->
+        <link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" > <!--BOOTSTRAP 5.3.2. -->
             
 
     </head>
@@ -21,6 +21,6 @@
             
             <?php include 'componentes/footer/footer.php';		// Pie ?>  
         </div>
-        <script src="C:\laragon\www\musicmatch\vendor\twbs\bootstrap\dist\js\bootstrap.bundle.min.js"> </script> <!-- script de bootstrap -->
+        <script src="C:\laragon\www\musicmatch\vendor\twbs\bootstrap\dist\js\bootstrap.min.js"> </script> <!--script de bootstrap -->
     </body>
 </html>

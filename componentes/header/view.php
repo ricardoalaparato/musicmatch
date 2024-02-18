@@ -1,6 +1,6 @@
 <header> 
 
-    <nav class="navbar bg-primary" data-bs-theme="dark">
+    <nav class="navbar" style="background-color: #00bfff;">
         <div class="container">
             <a class="navbar-brand" href="#">
             <img src="img/logos/musicmatch.svg" alt="Logo" width="70" height="70" class="d-inline-block rounded-circle"></a>

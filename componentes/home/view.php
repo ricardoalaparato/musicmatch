@@ -1,34 +1,32 @@
-<body>
+<section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/frontpage/fondoazul.jpg'); height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+  <div class="container">
 
-  <!-- Background image -->
-<!-- <div
-  class="bg-image"
-  style="
-    background-image: url('http://localhost/musicmatch/img/frontpage/fondoazul.jpg');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  ">
-</div> -->
+    <div class="row text-center text-white p-5">
+      <h1>musicmatch</h1>
+      <p class="p-2">el lugar donde se reune la musica</p>
+    </div>
 
-<!-- Jumbotron -->
-<div
-  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-  style="background-image: url('http://localhost/musicmatch/img/frontpage/fondoazul.jpg');
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;"
->
-  <h1 class="mb-3 h2">Jumbotron</h1>
-
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
-    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
-    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
-  </p>
-</div>
-<!-- Jumbotron -->
-
-</body>
+    <div class="row p-5">
+      <div class="col m-3">
+        <div class="card text-center" >
+          <img src="img\frontpage\grupow.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">¿Sois un grupo...</h5>
+            <p class="card-text">y os falta algún instrumento?</p>
+            <a href="#" class="btn btn-primary">Únete a musicmatch</a>
+          </div>
+        </div>
+      </div>
+      <div class="col m-3">
+        <div class="card text-center">
+          <img src="img\frontpage\bajista.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">¿Tocas algún instrumento...</h5>
+            <p class="card-text">y estás buscando un grupo?</p>
+            <a href="#" class="btn btn-primary">Únete a musicmatch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
