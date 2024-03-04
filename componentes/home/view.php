@@ -2,7 +2,7 @@
   <div class="container">
 
     <div class="row text-center text-white p-5">
-      <h1>musicmatch</h1>
+      <h1>meet2play</h1>
       <p class="p-2">el lugar donde se reune la musica</p>
     </div>
 

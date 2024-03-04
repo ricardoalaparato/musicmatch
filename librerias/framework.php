@@ -1,7 +1,7 @@
 <?php
 // BBDD
 
-//include 'librerias/db.pdo.php'; TODO db.pdo.php
+include 'librerias/db.pdo.php';
 
 // Carga controlador para un componenente
 function loader($componente){
