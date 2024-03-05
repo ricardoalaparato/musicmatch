@@ -1,5 +1,6 @@
 <?php 
     include 'librerias/framework.php';
+    include 'librerias/sanea.php'
 ?>
 <!DOCTYPE html>
 <html lang="es">

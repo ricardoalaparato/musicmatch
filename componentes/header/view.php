@@ -5,9 +5,9 @@
             <a class="navbar-brand" href="#">
             <img src="img/logos/musicmatch.png" alt="Logo" width="70" height="70" class="d-inline-block rounded-circle"></a>
             <nav class="nav nav-justified">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php?option=home">Home</a>
                 <a class="nav-link" href="#">Contacto</a>
-                <a class="nav-link" href="componentes/usuarios/controller.php">Login</a>
+                <a class="nav-link" href="index.php?option=usuarios">Login</a>
                 <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
             </nav>
         </div>

@@ -1,2 +1,2 @@
 <?php
-    include 'componentes/home/view.php';
+    include 'view.php';

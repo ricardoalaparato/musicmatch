@@ -2,18 +2,17 @@
 
 class modelUsuarios {
     
-    public static function registro($nick, $clave, $nombre, $apellidos, $dni, $email, $id_tipo){
+    public static function registro($nick, $email, $clave, $rolid, $activo){
         $db = new database();
-        $sql = 'INSERT INTO usuarios (nick, clave, nombre, apellidos, dni, email, id_tipo) 
-                VALUES (:nick, :clave, :nombre, :apellidos, :dni, :email, :id_tipo)';
+        $sql = 'INSERT INTO usuarios (nick, email, clave, rolid, activo) 
+                VALUES (:nick, :email, :clave, :rolid, :activo)';
         $params = array(
             ':nick'          => $nick,
-            ':clave'         => $clave,
-            ':nombre'        => $nombre, 
-            ':apellidos'     => $apellidos, 
-            ':dni'           => $dni, 
             ':email'         => $email,
-            ':id_tipo'       => $id_tipo
+            ':clave'         => $clave, 
+            ':rolid'         => $rolid, 
+            ':activo'        => $activo, 
+            
         );
         $db->query($sql, $params);
         return $db->affectedRows();
@@ -21,7 +20,7 @@ class modelUsuarios {
     
     public static function comprobarCredenciales($nick, $clave){ 
         $db = new database();
-        $sql = "SELECT id, nick, activo, id_tipo FROM usuarios
+        $sql = "SELECT id, nick, rolid, activo FROM usuarios
                 WHERE nick = :nick 
                 AND clave = :clave";
         $params = array(
@@ -34,7 +33,7 @@ class modelUsuarios {
     
     public static function getTipos(){
         $db = new database();
-        $sql = "SELECT id, tipo FROM tipo_usuario";
+        $sql = "SELECT id, tipo FROM roles";
         $db->query($sql);
         return $db->cargaMatriz();  
     }    
