@@ -36,23 +36,23 @@ function sanea($input, $tipo, $min_long, $max_long, $regexp = '') {
                         $output = filter_var($output, FILTER_SANITIZE_FLOAT_INT);
                         $output = floatval($output);
                         break;
-                    //default:
-                        //echo 'Error. El tipo de saneo no es correcto';
-                        //$output = FALSE;
+                    default:
+                        echo 'Error. El tipo de saneo no es correcto';
+                        $output = FALSE;
                 }
                         
             } else {
-                /*echo 'Error. El dato no concuerda con el patr&oacute;n';*/
+                echo 'Error. El dato no concuerda con el patr&oacute;n';
                 $output = FALSE;
             }
         
         } else {
-            /*echo 'Error. La longitud del dato es incorrecta';*/
+            echo 'Error. La longitud del dato es incorrecta';
             $output = FALSE;
         }
         
     } else {
-        /*echo 'Error. El dato no esta definido o esta vacio';*/
+        echo 'Error. El dato no esta definido o esta vacio';
         $output = FALSE;
     }
     
