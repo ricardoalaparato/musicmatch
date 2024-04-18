@@ -40,7 +40,13 @@ if (isset($_POST["login"])){
         echo 'que vamos a hacer esta noche cerebro';
         echo $estado;
     }
-}  
+} 
+
+if(isset($_GET['logout'])){
+    session_unset();
+    header('Location: index.php');
+    exit();
+}
 
     
     

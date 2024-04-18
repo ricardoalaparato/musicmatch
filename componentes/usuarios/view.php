@@ -1,7 +1,7 @@
 
 <!-- TODO: Sustituir los div por etiquetas adecuadas -->
-
-<section class="bg-primary d-flex justify-content-center align-items-center vh-100">
+<div class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+<section class="d-flex justify-content-center align-items-center vh-100" >
 <?php if(!isset($_GET['registro'])){ ?>
     <div
       class="bg-white p-5 rounded-3 overflow-hidden text-secondary shadow"
@@ -9,15 +9,15 @@
     >
       <div class="d-flex justify-content-center">
         <img
-          src="img/logos/musicmatch.png"
+          src="img/logos/1.png"
           alt="logo-icon"
-          style="height: 8rem; width: 17rem;"
+          style="height: 10rem; width: 10rem;"
         />
       </div>
-      <div class="text-center fs-1 fw-bold">Login</div>
-      <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="off">"
+      <!-- <div class="text-center fs-1 fw-bold">Login</div> -->
+      <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="off">
         <li class="input-group mt-4">
-          <div class="input-group-text bg-primary">
+          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -33,7 +33,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text bg-primary">
+          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img/iconos/password-icon.svg"
               alt="password-icon"
@@ -49,13 +49,13 @@
           />
         </li>
         
-        <button class="btn btn-primary text-white w-100 mt-4 fw-semibold shadow-sm" type="submit" name="login" value="login">
+        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="login" value="login">
           Login
         </button>
       </form>
       <div class="d-flex gap-1 justify-content-center mt-1">
         <div>¿No tienes cuenta?</div>
-        <a href="index.php?option=usuarios&registro=true" class="text-decoration-none text-primary fw-semibold">Registrate</a>
+        <a href="index.php?option=usuarios&registro=true" class="text-decoration-none fw-semibold" style="color:violet;">Registrate</a>
       </div>
     </div>
       
@@ -71,15 +71,15 @@
     >
       <div class="d-flex justify-content-center">
         <img
-          src="img/iconos/login-icon.svg"
+          src="img/logos/1.png"
           alt="login-icon"
-          style="height: 7rem"
+          style="height: 10rem"
         />
       </div>
-      <div class="text-center fs-1 fw-bold">Registro</div>
-      <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="on">"
+      <!-- <div class="text-center fs-1 fw-bold">Registro</div> -->
+      <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="on">
         <li class="input-group mt-4">
-          <div class="input-group-text bg-primary">
+          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -95,7 +95,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text bg-primary">
+          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img/iconos/email-address-icon.svg"
               alt="email-icon"
@@ -111,7 +111,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text bg-primary">
+          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -127,7 +127,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text bg-primary">
+          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -145,7 +145,7 @@
       <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['id_tipo'] == 1) {?>
         <li class="input-group mt-1">
            <!-- <label for="activo" title="Introduce el estado del usuario">Activo</label> -->
-           <div class="input-group-text bg-primary">
+           <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img\iconos\active.svg"
               alt="activo"
@@ -164,7 +164,7 @@
                               
         <?php }?>
         <li class="input-group mt-1">
-           <div class="input-group-text bg-primary">
+           <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
             <img
               src="img\iconos\music-guitar.svg"
               alt="Instrumento"
@@ -182,7 +182,7 @@
             </select><br><br>
         </li>
 
-        <button class="btn btn-primary text-white w-100 mt-4 fw-semibold shadow-sm" type="submit" name="registro" value="registro">
+        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="registro" value="registro">
           Regístrate
         </button>
       </form>
@@ -190,7 +190,8 @@
   <?php }; ?>
   <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php';
   echo $estado . 'huhu'; } ?> 
-</section>  
+</section> 
+</div> 
   
             
 
