@@ -22,6 +22,6 @@
             
             <?php include 'componentes/footer/footer.php';		// Pie ?>  
         </div>
-        <script src="C:\laragon\www\musicmatch\vendor\twbs\bootstrap\dist\js\bootstrap.min.js"> </script> <!--script de bootstrap -->
+        <script src="vendor\twbs\bootstrap\dist\js\bootstrap.min.js"> </script> <!--script de bootstrap -->
     </body>
 </html>
