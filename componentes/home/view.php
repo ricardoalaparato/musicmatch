@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="row justify-content-center mt-5">
-        <div class="col-sm-6 p-5">
+        <div class="col-sm-6 p-3">
           <div id="carouselExampleCaptions" class=" carousel-dark carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <?php
@@ -62,8 +62,8 @@
                 <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
                   <img src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" class="d-block w-100 rounded-circle" alt="...">
                   <div class="carousel-caption d-none d-md-block">
-                    <h2><?php echo $restousuario['nick'] ?></h2>
-                    <h5><?php echo $restousuario['descripcion'] ?></h5>
+                    <h2 class="text-white"><?php echo $restousuario['nick'] ?></h2>
+                    <h5 class="text-white"><?php echo $restousuario['descripcion'] ?></h5>
                   </div>
                 </div>
                 <?php $cont = 1; } 

@@ -2,16 +2,14 @@
 
 class modelUsuarios {
     
-    public static function registro($nick, $email, $clave, $rolid, $activo, $esid){
+    public static function registro($nick, $email, $clave, $esid){
         $db = new database();
-        $sql = 'INSERT INTO usuarios (nick, email, clave, rolid, activo, esid) 
-                VALUES (:nick, :email, :clave, :rolid, :activo, :esid)';
+        $sql = 'INSERT INTO usuarios (nick, email, clave, esid) 
+                VALUES (:nick, :email, :clave, :esid)';
         $params = array(
             ':nick'          => $nick,
             ':email'         => $email,
             ':clave'         => $clave, 
-            ':rolid'         => $rolid, 
-            ':activo'        => $activo, 
             ':esid'          => $esid
             
         );
