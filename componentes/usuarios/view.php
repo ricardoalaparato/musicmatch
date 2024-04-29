@@ -173,7 +173,7 @@
           </div>
            <select id="esid" name="esid" class="form-control bg-light">
                   <option value="" <?php echo (!isset($usuario))?' selected':'';?>>Elige tu instrumento</option>
-                  <option value="6" <?php echo (isset($usuario) && ($usuario['esid'] == 0))?' selected':'';?>>Somos un grupo</option>
+                  <option value="6" <?php echo (isset($usuario) && ($usuario['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
                   <option value="1" <?php echo (isset($usuario) && ($usuario['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
                   <option value="2" <?php echo (isset($usuario) && ($usuario['esid'] == 2))?' selected':'';?>>Toco el bajo</option>
                   <option value="3" <?php echo (isset($usuario) && ($usuario['esid'] == 3))?' selected':'';?>>Toco la guitarra</option>
