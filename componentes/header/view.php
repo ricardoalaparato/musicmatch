@@ -13,7 +13,7 @@
                 <?php } else { ?>
                         <a class="nav-link h3" style="color:violet;" href="index.php?option=usuarios&logout=true">Logout </a>
                         <?php if ($_SESSION['usuario']['rolid'] > 1 ) {?>
-                            <a class="nav-link h3 " style="color:violet;" href="#"> Perfil </a>
+                            <a class="nav-link h3 " style="color:violet;" href="index.php?option=perfil"> Perfil </a>
                             <a class="nav-link h3 " style="color:violet;" href="#"> Solicitudes </a>
                             <?php } else {?>
                                 <a class="nav-link h3 " style="color:violet;" href="#"> Perfil </a>

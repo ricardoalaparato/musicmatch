@@ -31,7 +31,7 @@ class database {
             $this->conexion = new PDO($this->driver.':host='.$this->dbhost.';dbname='.$this->dbname, $this->dbuser, $this->dbpass/*, array(PDO::ATTR_PERSISTENT => true)*/);
             //$this->conexion->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Se ha establecido conexión con la Base de Datos.";
+            
         } catch (Exception $e) {
             echo "Se ha producido un error en la conexion con la BD."; 
         }

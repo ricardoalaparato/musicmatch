@@ -142,7 +142,7 @@
             name="clave2"
           />
         </li>
-      <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['id_tipo'] == 1) {?>
+      <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rolid'] == 1) {?>
         <li class="input-group mt-1">
            <!-- <label for="activo" title="Introduce el estado del usuario">Activo</label> -->
            <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
@@ -160,7 +160,7 @@
         </li>
         <?php } else {?>  
           
-            <input type="hidden" id="tipo" name="tipo" value="3" />
+            <input type="hidden" id="rolid" name="rolid" value="3" />
                               
         <?php }?>
         <li class="input-group mt-1">
@@ -181,6 +181,7 @@
                   <option value="5" <?php echo (isset($usuario) && ($usuario['esid'] == 5))?' selected':'';?>>Soy cantante</option>
             </select><br><br>
         </li>
+        
 
         <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="registro" value="registro">
           Regístrate
