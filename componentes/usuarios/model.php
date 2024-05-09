@@ -19,7 +19,7 @@ class modelUsuarios {
     
     public static function comprobarCredenciales($nick, $clave){ 
         $db = new database();
-        $sql = "SELECT id, nick, rolid, activo, esid, descripcion, rutaimagen FROM usuarios
+        $sql = "SELECT id, nick, rolid, email, activo, esid, descripcion, rutaimagen FROM usuarios
                 WHERE nick = :nick 
                 AND clave = :clave";
         $params = array(

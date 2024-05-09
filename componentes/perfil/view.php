@@ -28,6 +28,7 @@
             placeholder="Tu nombre de usuario"
             id="nick"
             name="nick"
+            value="<?php echo $_SESSION['usuario']['nick'];?>"
           />
         </li>
         <li class="input-group mt-1">
@@ -44,6 +45,7 @@
             placeholder="Tu direccion de correo"
             id="email"
             name="email"
+            value="<?php echo $_SESSION['usuario']['email'];?>"
           />
         </li>
         <li class="input-group mt-1">
@@ -60,6 +62,7 @@
             placeholder="Tu clave"
             id="clave"
             name="clave"
+            value="<?php echo $_SESSION['usuario']['clave'];?>"
           />
         </li>
         <li class="input-group mt-1">
@@ -76,6 +79,7 @@
             placeholder="Otra vez"
             id="clave2"
             name="clave2"
+            value="<?php echo $_SESSION['usuario']['clave'];?>"
           />
         </li>
       <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rolid'] == 1) {?>
@@ -89,9 +93,9 @@
             />
           </div>
            <select id="activo" name="activo" class="form-control bg-light">
-                  <option value="" <?php echo (!isset($usuario))?' selected':'';?>>¿Activo?</option>
-                  <option value="0" <?php echo (isset($usuario) && ($usuario['activo'] == 0))?' selected':'';?>>No</option>
-                  <option value="1" <?php echo (isset($usuario) && ($usuario['activo'] == 1))?' selected':'';?>>S&iacute;</option>
+                  <option value="" <?php echo (!isset($_SESSION['usuario']))?' selected':'';?>>¿Activo?</option>
+                  <option value="0" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['activo'] == 0))?' selected':'';?>>No</option>
+                  <option value="1" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['activo'] == 1))?' selected':'';?>>S&iacute;</option>
             </select><br><br>
         </li>
         <?php } else {?>  
@@ -108,13 +112,13 @@
             />
           </div>
            <select id="esid" name="esid" class="form-control bg-light">
-                  <option value="" <?php echo (!isset($usuario))?' selected':'';?>>Elige tu instrumento</option>
-                  <option value="6" <?php echo (isset($usuario) && ($usuario['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
-                  <option value="1" <?php echo (isset($usuario) && ($usuario['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
-                  <option value="2" <?php echo (isset($usuario) && ($usuario['esid'] == 2))?' selected':'';?>>Toco el bajo</option>
-                  <option value="3" <?php echo (isset($usuario) && ($usuario['esid'] == 3))?' selected':'';?>>Toco la guitarra</option>
-                  <option value="4" <?php echo (isset($usuario) && ($usuario['esid'] == 4))?' selected':'';?>>Toco los teclados</option>
-                  <option value="5" <?php echo (isset($usuario) && ($usuario['esid'] == 5))?' selected':'';?>>Soy cantante</option>
+                  <option value="" <?php echo (!isset($_SESSION['usuario']))?' selected':'';?>>Elige tu instrumento</option>
+                  <option value="6" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
+                  <option value="1" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
+                  <option value="2" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 2))?' selected':'';?>>Toco el bajo</option>
+                  <option value="3" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 3))?' selected':'';?>>Toco la guitarra</option>
+                  <option value="4" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 4))?' selected':'';?>>Toco los teclados</option>
+                  <option value="5" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 5))?' selected':'';?>>Soy cantante</option>
             </select><br><br>
         </li>
 
@@ -130,8 +134,9 @@
             class="form-control bg-light"
             type="text"
             placeholder="Una breve descripción de tí"
-            id="brevedescripcion"
-            name="brevedescripcion"
+            id="descripcion"
+            name="descripcion"
+            value="<?php echo $_SESSION['usuario']['descripcion'];?>"
           />
         </li>
 
@@ -149,12 +154,14 @@
             placeholder=""
             id="archivo"
             name="archivo"
+            
+            
           />
-          <button type="submit" id="subirfoto"  class="btn btn-primary">Subir Foto</button> 
+          
         </li>
 
-        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="registro" value="registro">
-          Regístrate
+        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="actualizar" value="actualizar">
+          Actualizar Perfil
         </button>
       </form>
     </div>

@@ -30,7 +30,7 @@
   <div class= "container">
     <div class="row align-items-center">
         <div class="col-sm-4 text-center mt-5">
-          <img src="img/fichas/4.png" class="img-fluid rounded-circle w-50" alt="Foto de perfil">
+          <img src="img/fichas/<?php echo $usuario['rutaimagen'] ?>" class="img-fluid rounded-circle w-50" alt="Foto de perfil">
         </div>
         <div class="col-sm-8 text-center mt-5 ">          
             <div class="card w-100" >
@@ -38,8 +38,8 @@
                 <h5 class="card-title"><?php echo $usuario['nick'] ?></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $usuario['rutaimagen'] ?></h6>
                 <p class="card-text"><?php echo $usuario['descripcion'] ?></p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <a href="#" class="card-link">Instagram</a>
+                <a href="#" class="card-link">YouTube</a>
               </div>
             </div>
         </div>

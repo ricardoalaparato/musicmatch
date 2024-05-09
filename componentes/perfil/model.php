@@ -2,10 +2,10 @@
 
 class modelPerfil {
 
-    public static function actualizarPerfil( $id, $nick, $email, $clave, $rolid, $esid, $descripcion, $rutaimagen) {
+    public static function actualizarPerfil( $id, $nick, $email, $clave, $esid, $descripcion, $rutaimagen) {
         $db = new database();
         $sql = 'UPDATE usuarios
-                SET nick = :nick, email = :email, clave = :clave, rolid = :rolid, 
+                SET nick = :nick, email = :email, clave = :clave, 
                  esid = :esid, descripcion = :descripcion, rutaimagen = :rutaimagen
                 WHERE id = :id';
         $params = array(
@@ -13,7 +13,6 @@ class modelPerfil {
             ':nick'         => $nick,
             ':email'        => $email,
             ':clave'        => $clave,
-            ':rolid'        => intval($rolid),
             ':esid'         => intval($esid),
             ':descripcion'  => $descripcion,
             ':rutaimagen'   => $rutaimagen
