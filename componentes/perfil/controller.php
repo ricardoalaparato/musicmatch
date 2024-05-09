@@ -25,12 +25,20 @@ if(isset($_POST['actualizar'])) {
     $estado .= ' Error - El correo electronico es incorrecto. ';
   }
 
-  if(sanea($_POST['clave'], 'string', 8, 45, '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/')) {
-      $clave = sanea($_POST['clave'], 'string', 8, 45, '');
-      $clave = hash('sha256', $salt.$clave);
+  if(isset($_POST['clave']) && $_POST['clave'] != NULL){
+    if(sanea($_POST['clave'], 'string', 8, 45, '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/')) {
+        $clave = sanea($_POST['clave'], 'string', 8, 45, '');
+        $clave = hash('sha256', $salt.$clave);
+    } else {
+        $estado .= ' Error - La contrase&ntilde;a debe tener al menos 8 caracteres, y contener may&uacute;sculas, min&uacute;sculas y n&uacute;meros. ';
+    }
   } else {
-      $estado .= ' Error - La contrase&ntilde;a debe tener al menos 8 caracteres, y contener may&uacute;sculas, min&uacute;sculas y n&uacute;meros. ';
+    $clave = $perfil['clave'];
   }
+
+  if($_POST['clave'] != $_POST['clave2']) {
+    $estado .= ' Error - Las contrase&ntilde;as deben iguales. ';
+}
 
   if(sanea($_POST['esid'], 'int', 1, 11, '')) {
       $esid = sanea($_POST['esid'], 'int', 1, 11, '');
@@ -77,6 +85,7 @@ if(isset($_POST['actualizar'])) {
 
   } else {
     $estado .= ' Error - La actualizacion ha fallado';
+    echo ($estado);
   }
 
 }

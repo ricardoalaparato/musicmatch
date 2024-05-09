@@ -62,7 +62,7 @@
             placeholder="Tu clave"
             id="clave"
             name="clave"
-            value="<?php echo $_SESSION['usuario']['clave'];?>"
+            
           />
         </li>
         <li class="input-group mt-1">
@@ -79,7 +79,7 @@
             placeholder="Otra vez"
             id="clave2"
             name="clave2"
-            value="<?php echo $_SESSION['usuario']['clave'];?>"
+            
           />
         </li>
       <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rolid'] == 1) {?>
