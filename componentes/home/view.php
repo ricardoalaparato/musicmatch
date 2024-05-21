@@ -4,11 +4,11 @@
     <div class="row p-5">
       <div class="col m-3">
         <div class="card text-center" >
-          <img src="img\fichas\9.png" class="card-img-top" alt="...">
+          <img src="img\fichas\14.png" class="card-img-top" alt="...">
           <div class="card-body" style="background-color:  #f1c40f ;">
             <h2 class="card-title mt-4">¿Sois un grupo...</h2>
             <h4 class="card-text">y os falta algún instrumento?</h4>
-            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4" style="background-color:#5b2c6f; color:white;">Ven a Meet2Play</a>
+            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4" style="background-color:#63ADF0; color:white;">Ven a Meet2Play</a>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
           <div class="card-body" style="background-color: #f1c40f ;">
             <h2 class="card-title mt-4">¿Tocas algún instrumento...</h2>
             <h4 class="card-text">y estás buscando un grupo?</h4>
-            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4" style="background-color:#5b2c6f; color:white;">Ven a Meet2Play</a>
+            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4" style="background-color:#63ADF0; color:white;">Ven a Meet2Play</a>
           </div>
         </div>
       </div>
@@ -45,26 +45,22 @@
         </div>
     </div>
     <div class="row justify-content-center mt-5">
-        <div class="col-sm-6 p-3">
+        <div class="col-sm-4 p-3">
           <div id="carouselExampleCaptions" class=" carousel-dark carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <?php
-                $cont=0;
-                foreach ($restousuarios as $restousuario){ ?>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $cont ?>" class="<?php echo $cont == 0?"active":"" ?>" aria-current="true" aria-label="Slide <?php echo ($cont + 1) ?>"></button>
-                  <?php $cont = $cont + 1; } 
-              ?>
-            </div>
+            
             <div class="carousel-inner">
               <?php
                 $cont=0; 
                 foreach ($restousuarios as $restousuario) { ?>
                 <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
-                  <img src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" class="d-block w-100 rounded-circle" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2 class="text-white"><?php echo $restousuario['nick'] ?></h2>
-                    <h5 class="text-white"><?php echo $restousuario['descripcion'] ?></h5>
+                  <div class="card" style="width: 50 rem;">
+                      <img class="card-img-top" src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" alt="Card image cap">
+                      <div class="card-body text-center">
+                        <h3 class="card-text"><?php echo $restousuario['nick'] ?></h3>
+                        <h5 class="card-text"><?php echo $restousuario['esidstring']?></h5>
+                      </div>
                   </div>
+                  
                 </div>
                 <?php $cont = 1; } 
               ?>

@@ -17,7 +17,7 @@
       <!-- <div class="text-center fs-1 fw-bold">Login</div> -->
       <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="off">
         <li class="input-group mt-4">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -33,7 +33,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/password-icon.svg"
               alt="password-icon"
@@ -49,7 +49,7 @@
           />
         </li>
         
-        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="login" value="login">
+        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#63ADF0;" type="submit" name="login" value="login">
           Login
         </button>
       </form>
@@ -79,7 +79,7 @@
       <!-- <div class="text-center fs-1 fw-bold">Registro</div> -->
       <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="on">
         <li class="input-group mt-4">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -95,7 +95,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/email-address-icon.svg"
               alt="email-icon"
@@ -111,7 +111,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -127,7 +127,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -145,7 +145,7 @@
       <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rolid'] == 1) {?>
         <li class="input-group mt-1">
            <!-- <label for="activo" title="Introduce el estado del usuario">Activo</label> -->
-           <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+           <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\active.svg"
               alt="activo"
@@ -164,7 +164,7 @@
                               
         <?php }?>
         <li class="input-group mt-1">
-           <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+           <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\music-guitar.svg"
               alt="Instrumento"
@@ -183,7 +183,7 @@
         </li>
         
 
-        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="registro" value="registro">
+        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#63ADF0;" type="submit" name="registro" value="registro">
           Regístrate
         </button>
       </form>

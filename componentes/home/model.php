@@ -14,6 +14,17 @@ class modelHome {
         return $db->cargaMatriz();
     }
 
+    public static function esidToString ($esid) {
+        $db = new database();
+        $sql = "SELECT nombre FROM instrumentos
+                WHERE id = :id ";
+        $params = array(
+            ':id' => $esid
+        );
+        $db->query($sql,$params);
+        return $db->cargaMatriz();  
+    }
+
 
 }
 
