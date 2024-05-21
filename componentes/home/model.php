@@ -22,7 +22,7 @@ class modelHome {
             ':id' => $esid
         );
         $db->query($sql,$params);
-        return $db->cargaMatriz();  
+        return $db->cargaFila();  
     }
 
 

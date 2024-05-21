@@ -57,7 +57,7 @@
                       <img class="card-img-top" src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" alt="Card image cap">
                       <div class="card-body text-center">
                         <h3 class="card-text"><?php echo $restousuario['nick'] ?></h3>
-                        <h5 class="card-text"><?php echo $restousuario['esidstring']?></h5>
+                        <h5 class="card-text"><?php echo $esidstring[$restousuario['esid']]['nombre']?></h5>
                       </div>
                   </div>
                   
