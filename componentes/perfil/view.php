@@ -15,7 +15,7 @@
       <!-- <div class="text-center fs-1 fw-bold">Registro</div> -->
       <form class="form" method="POST" action="index.php?option=perfil" enctype="multipart/form-data" autocomplete="on">
         <li class="input-group mt-4">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -32,7 +32,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/email-address-icon.svg"
               alt="email-icon"
@@ -49,7 +49,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -66,7 +66,7 @@
           />
         </li>
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -85,7 +85,7 @@
       <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rolid'] == 1) {?>
         <li class="input-group mt-1">
            <!-- <label for="activo" title="Introduce el estado del usuario">Activo</label> -->
-           <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+           <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\active.svg"
               alt="activo"
@@ -104,7 +104,7 @@
                               
         <?php }?>
         <li class="input-group mt-1">
-           <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+           <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img\iconos\music-guitar.svg"
               alt="Instrumento"
@@ -113,39 +113,39 @@
           </div>
            <select id="esid" name="esid" class="form-control bg-light">
                   <option value="" <?php echo (!isset($_SESSION['usuario']))?' selected':'';?>>Elige tu instrumento</option>
-                  <option value="6" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
-                  <option value="1" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
-                  <option value="2" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 2))?' selected':'';?>>Toco el bajo</option>
-                  <option value="3" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 3))?' selected':'';?>>Toco la guitarra</option>
-                  <option value="4" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 4))?' selected':'';?>>Toco los teclados</option>
-                  <option value="5" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 5))?' selected':'';?>>Soy cantante</option>
+                  <option value="1" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 1))?' selected':'';?>>Somos un grupo</option>
+                  <option value="2" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 2))?' selected':'';?>>Toco la bateria</option>
+                  <option value="3" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 3))?' selected':'';?>>Toco el bajo</option>
+                  <option value="4" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 4))?' selected':'';?>>Toco la guitarra</option>
+                  <option value="5" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 5))?' selected':'';?>>Toco los teclados</option>
+                  <option value="6" <?php echo (isset($_SESSION['usuario']) && ($_SESSION['usuario']['esid'] == 6))?' selected':'';?>>Soy cantante</option>
             </select><br><br>
         </li>
 
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
               src="img/iconos/card-text.svg"
               alt="card-icon"
               style="height: 1rem"
             />
           </div>
-          <input
+          <textarea
             class="form-control bg-light"
             type="text"
             placeholder="Una breve descripción de tí"
             id="descripcion"
-            name="descripcion"
-            value="<?php echo $_SESSION['usuario']['descripcion'];?>"
-          />
+            name="descripcion">
+              <?php echo $_SESSION['usuario']['descripcion'];?>
+          </textarea>
         </li>
 
         <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#5b2c6f; color:white;">
+          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
             <img
-              src="img/iconos/card-text.svg"
+              src="img/iconos/image.svg"
               alt="card-icon"
-              style="height: 1rem"
+              style="height: 1rem; color: white;"
             />
           </div>
           <input
@@ -160,7 +160,7 @@
           
         </li>
 
-        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#5b2c6f;" type="submit" name="actualizar" value="actualizar">
+        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#63ADF0;" type="submit" name="actualizar" value="actualizar">
           Actualizar Perfil
         </button>
       </form>
@@ -170,16 +170,3 @@
 </div>
 
 
-<div class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
-<section class="d-flex justify-content-center align-items-center vh-100" >
-<form class="form" method="POST" action="index.php?option=perfil" enctype="multipart/form-data" autocomplete="on">
-  
-    <li>
-      <label for="formFile" class="form-label mt-4">Selecciona foto</label>
-      <input class="form-control" type="file" id="formFile" name="archivo">
-    </li>
-    <button type="submit" id="subirfoto2"  class="btn btn-primary">Subir Foto</button>
-    
-</form> 
-</section>
-</div>

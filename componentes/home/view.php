@@ -33,13 +33,11 @@
           <img src="img/fichas/<?php echo $usuario['rutaimagen'] ?>" class="img-fluid rounded-circle w-50" alt="Foto de perfil">
         </div>
         <div class="col-sm-8 text-center mt-5 ">          
-            <div class="card w-100" >
+            <div class="card w-100 border-info border-5 rounded-pill" style="background-color:#63ADF0;" >
               <div class="card-body">
                 <h5 class="card-title"><?php echo $usuario['nick'] ?></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><?php echo $usuario['rutaimagen'] ?></h6>
+                <h6 class="card-subtitle mb-2 text-muted"><?php echo $usuarioinstrumento['nombre'] ?></h6>
                 <p class="card-text"><?php echo $usuario['descripcion'] ?></p>
-                <a href="#" class="card-link">Instagram</a>
-                <a href="#" class="card-link">YouTube</a>
               </div>
             </div>
         </div>
@@ -53,7 +51,7 @@
                 $cont=0; 
                 foreach ($restousuarios as $restousuario) { ?>
                 <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
-                  <div class="card" style="width: 50 rem;">
+                  <div class="card rounded-2 text-dark border-info border-5 mb-3" style="width: 50 rem; background-color:#63ADF0;">
                       <img class="card-img-top" src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" alt="Card image cap">
                       <div class="card-body text-center">
                         <h3 class="card-text"><?php echo $restousuario['nick'] ?></h3>
