@@ -32,12 +32,12 @@
         <div class="col-sm-4 text-center mt-5">
           <img src="img/fichas/<?php echo $usuario['rutaimagen'] ?>" class="img-fluid rounded-circle w-50" alt="Foto de perfil">
         </div>
-        <div class="col-sm-8 text-center mt-5 ">          
-            <div class="card w-100 border-info border-5 rounded-pill" style="background-color:#63ADF0;" >
+        <div class="col-sm-8 mt-5 ">          
+            <div class="card w-100 border-3 rounded-pill" style="background-color:#7fc6f5; border-color:#674EA7;" >
               <div class="card-body">
-                <h5 class="card-title"><?php echo $usuario['nick'] ?></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><?php echo $usuarioinstrumento['nombre'] ?></h6>
-                <p class="card-text"><?php echo $usuario['descripcion'] ?></p>
+                <h5 class="card-title text-center" style="color:#674EA7;"><?php echo $usuario['nick'] ?></h5>
+                <h6 class="card-subtitle mb-2  text-center text-muted"><?php echo $usuarioinstrumento['nombre'] ?></h6>
+                <p class="card-text p-2 ml-2 text-center" style="color:#f8da67;"><?php echo $usuario['descripcion'] ?></p>
               </div>
             </div>
         </div>
@@ -51,11 +51,11 @@
                 $cont=0; 
                 foreach ($restousuarios as $restousuario) { ?>
                 <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
-                  <div class="card rounded-2 text-dark border-info border-5 mb-3" style="width: 50 rem; background-color:#63ADF0;">
+                  <div class="card rounded-2 text-dark border-3 mb-3" style="width: 50 rem; background-color:#7fc6f5; border-color:#674EA7;";>
                       <img class="card-img-top" src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" alt="Card image cap">
                       <div class="card-body text-center">
-                        <h3 class="card-text"><?php echo $restousuario['nick'] ?></h3>
-                        <h5 class="card-text"><?php echo $esidstring[$restousuario['esid']]['nombre']?></h5>
+                        <h3 class="card-text" style="color:#674EA7;"><?php echo $restousuario['nick'] ?></h3>
+                        <h5 class="card-text" style="color:#f8da67;"><?php echo $esidstring[$restousuario['esid']]['nombre']?></h5>
                       </div>
                   </div>
                   

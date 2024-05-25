@@ -4,8 +4,8 @@
 <section class="d-flex justify-content-center align-items-center vh-100" >
 <?php if(!isset($_GET['registro'])){ ?>
     <div
-      class="bg-white p-5 rounded-3 overflow-hidden text-secondary shadow"
-      style="width: 25rem"
+      class="bg-white p-5 rounded-3 border border-3 overflow-hidden text-secondary shadow"
+      style="width: 25rem; border-color: #674EA7 !important;"
     >
       <div class="d-flex justify-content-center">
         <img
@@ -16,8 +16,8 @@
       </div>
       <!-- <div class="text-center fs-1 fw-bold">Login</div> -->
       <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="off">
-        <li class="input-group mt-4">
-          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+        <li class="input-group mt-4 border border-white rounded" style="border-color:#674EA7 !important;">
+          <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -26,14 +26,15 @@
           </div>
           <input
             class="form-control bg-light"
+            style="color:#674EA7;"
             type="text"
             placeholder="Tu nombre de usuario"
             id="nick"
             name="nick"
           />
         </li>
-        <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+        <li class="input-group mt-1 border border-white rounded" style="border-color:#674EA7 !important;">
+          <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img/iconos/password-icon.svg"
               alt="password-icon"
@@ -42,6 +43,7 @@
           </div>
           <input
             class="form-control bg-light"
+            style="color:#674EA7;"
             type="password"
             placeholder="Tu clave"
             id="clave"
@@ -49,7 +51,7 @@
           />
         </li>
         
-        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#63ADF0;" type="submit" name="login" value="login">
+        <button class="btn w-100 mt-4 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;" type="submit" name="login" value="login">
           Login
         </button>
       </form>
@@ -66,8 +68,8 @@
 
 
     <div
-      class="bg-white p-5 rounded-3 overflow-hidden text-secondary shadow"
-      style="width: 25rem"
+      class="bg-white p-5 border border-3 rounded-3 overflow-hidden text-secondary shadow"
+      style="width: 25rem; border-color: #674EA7 !important;"
     >
       <div class="d-flex justify-content-center">
         <img
@@ -78,8 +80,8 @@
       </div>
       <!-- <div class="text-center fs-1 fw-bold">Registro</div> -->
       <form class="form" method="POST" action="index.php?option=usuarios" autocomplete="on">
-        <li class="input-group mt-4">
-          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+      <li class="input-group mt-4 border border-white rounded" style="border-color:#674EA7 !important;">
+          <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img/iconos/username-icon.svg"
               alt="username-icon"
@@ -88,14 +90,15 @@
           </div>
           <input
             class="form-control bg-light"
+            style="color:#674EA7;"
             type="text"
             placeholder="Tu nombre de usuario"
             id="nick"
             name="nick"
           />
         </li>
-        <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+        <li class="input-group mt-1 border border-white rounded" style="border-color:#674EA7 !important;">
+          <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img/iconos/email-address-icon.svg"
               alt="email-icon"
@@ -104,14 +107,15 @@
           </div>
           <input
             class="form-control bg-light"
+            style="color:#674EA7;"
             type="email"
             placeholder="Tu direccion de correo"
             id="email"
             name="email"
           />
         </li>
-        <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+        <li class="input-group mt-1 border border-white rounded" style="border-color:#674EA7 !important;">
+          <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -120,14 +124,15 @@
           </div>
           <input
             class="form-control bg-light"
+            style="color:#674EA7;"
             type="password"
             placeholder="Tu clave"
             id="clave"
             name="clave"
           />
         </li>
-        <li class="input-group mt-1">
-          <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+        <li class="input-group mt-1 border border-white rounded" style="border-color:#674EA7 !important;">
+          <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img\iconos\password-icon.svg"
               alt="password-icon"
@@ -136,6 +141,7 @@
           </div>
           <input
             class="form-control bg-light"
+            style="color:#674EA7;"
             type="password"
             placeholder="Otra vez"
             id="clave2"
@@ -143,16 +149,16 @@
           />
         </li>
       <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rolid'] == 1) {?>
-        <li class="input-group mt-1">
+        <li class="input-group mt-1 border border-white rounded" style="border-color:#674EA7 !important;">
            <!-- <label for="activo" title="Introduce el estado del usuario">Activo</label> -->
-           <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+           <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img\iconos\active.svg"
               alt="activo"
               style="height: 1rem"
             />
           </div>
-           <select id="activo" name="activo" class="form-control bg-light">
+           <select id="activo" name="activo" class="form-control bg-light" style="color:#674EA7;">
                   <option value="" <?php echo (!isset($usuario))?' selected':'';?>>¿Activo?</option>
                   <option value="0" <?php echo (isset($usuario) && ($usuario['activo'] == 0))?' selected':'';?>>No</option>
                   <option value="1" <?php echo (isset($usuario) && ($usuario['activo'] == 1))?' selected':'';?>>S&iacute;</option>
@@ -163,15 +169,15 @@
             <input type="hidden" id="rolid" name="rolid" value="3" />
                               
         <?php }?>
-        <li class="input-group mt-1">
-           <div class="input-group-text" style="background-color:#63ADF0; color:white;">
+        <li class="input-group mt-1 border border-white rounded" style="border-color:#674EA7 !important;">
+           <div class="input-group-text" style="background-color:#f8da67; color:white;">
             <img
               src="img\iconos\music-guitar.svg"
               alt="Instrumento"
               style="height: 1rem"
             />
           </div>
-           <select id="esid" name="esid" class="form-control bg-light">
+           <select id="esid" name="esid" class="form-control bg-light" style="color:#674EA7;">
                   <option value="" <?php echo (!isset($usuario))?' selected':'';?>>Elige tu instrumento</option>
                   <option value="6" <?php echo (isset($usuario) && ($usuario['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
                   <option value="1" <?php echo (isset($usuario) && ($usuario['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
@@ -183,7 +189,7 @@
         </li>
         
 
-        <button class="btn text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color:#63ADF0;" type="submit" name="registro" value="registro">
+        <button class="btn w-100 mt-4 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;" type="submit" name="registro" value="registro">
           Regístrate
         </button>
       </form>

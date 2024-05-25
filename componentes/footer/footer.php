@@ -1,4 +1,4 @@
-<footer class="text-center" style="background-color:#63ADF0;">
+<footer class="text-center" style="background-color:#7fc6f5;">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -10,8 +10,8 @@
         style="background-color: #3b5998;"
         href="#!"
         role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+      ><i class="fab fa-facebook-f"></i>
+      </a>
 
       <!-- Twitter -->
       <a
