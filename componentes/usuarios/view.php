@@ -179,12 +179,12 @@
           </div>
            <select id="esid" name="esid" class="form-control bg-light" style="color:#674EA7;">
                   <option value="" <?php echo (!isset($usuario))?' selected':'';?>>Elige tu instrumento</option>
-                  <option value="6" <?php echo (isset($usuario) && ($usuario['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
-                  <option value="1" <?php echo (isset($usuario) && ($usuario['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
-                  <option value="2" <?php echo (isset($usuario) && ($usuario['esid'] == 2))?' selected':'';?>>Toco el bajo</option>
-                  <option value="3" <?php echo (isset($usuario) && ($usuario['esid'] == 3))?' selected':'';?>>Toco la guitarra</option>
-                  <option value="4" <?php echo (isset($usuario) && ($usuario['esid'] == 4))?' selected':'';?>>Toco los teclados</option>
-                  <option value="5" <?php echo (isset($usuario) && ($usuario['esid'] == 5))?' selected':'';?>>Soy cantante</option>
+                  <option value="1" <?php echo (isset($usuario) && ($usuario['esid'] == 6))?' selected':'';?>>Somos un grupo</option>
+                  <option value="2" <?php echo (isset($usuario) && ($usuario['esid'] == 1))?' selected':'';?>>Toco la bateria</option>
+                  <option value="3" <?php echo (isset($usuario) && ($usuario['esid'] == 2))?' selected':'';?>>Toco el bajo</option>
+                  <option value="4" <?php echo (isset($usuario) && ($usuario['esid'] == 3))?' selected':'';?>>Toco la guitarra</option>
+                  <option value="5" <?php echo (isset($usuario) && ($usuario['esid'] == 4))?' selected':'';?>>Toco los teclados</option>
+                  <option value="6" <?php echo (isset($usuario) && ($usuario['esid'] == 5))?' selected':'';?>>Soy cantante</option>
             </select><br><br>
         </li>
         
