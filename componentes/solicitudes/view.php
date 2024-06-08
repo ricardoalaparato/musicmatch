@@ -1,6 +1,7 @@
-<div class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
-<section class="d-flex justify-content-center align-items-center vh-100" >
+
 <?php if(isset($_GET['enviar'])){ ?>
+  <div class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+  <section class="d-flex justify-content-center align-items-center vh-100" >
     <div
       class="bg-white p-5 rounded-3 border border-3 overflow-hidden text-secondary shadow"
       style="width: 25rem; border-color: #674EA7 !important;"
@@ -55,6 +56,64 @@
         </button>
       </form>
     </div>
-<?php } ?>
 </section>
 </div>
+<?php } ?>
+
+<?php if(isset($_GET['ver'])){ ?>
+  <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+  <div class= "container">
+
+  <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-sm-6 p-3 mt-5">
+          <div id="carouselExampleCaptions2" class=" carousel-dark carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-inner">
+              <?php
+                $cont=0; 
+                foreach ($solicitudes as $solicitud) { ?>
+                <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
+                  <!-- <div class="card rounded-2 text-dark border-3 mb-3" style="width: 50 rem; background-color:#7fc6f5; border-color:#674EA7;";>
+                      <img class="card-img-top" src="img/fichas/6.jpg" alt="Card image cap">
+                      <div class="card-body text-center">
+                        <h3 class="card-text" style="color:#674EA7;">Solicitud número </h3>
+                        <h5 class="card-text" style="color:#f8da67;"></h5>
+                        <h5 class="card-text" style="color:#f8da67;"></h5>
+                      </div> -->
+                  
+
+
+                  <div class="card text-center rounded-2 border-3" style="background-color:#7fc6f5; border-color:#674EA7;"; >
+                      <div class="card-header">
+                        Solicitud número <?php echo $solicitud['id'] ?>
+                      </div>
+                      <div class="card-boitle">Ofrezco: <?php echo $tocaidstring[$solicitud['tocaid']]['nombre']?></h5>
+                        <p class="card-text">Necesito: <?php echo $necesitaidstring[$solicitud['necesitaid']]['nombre']?> </p>
+                        <a href="index.php?option=solicitudes&ver=true&cancelar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Cancelar Solicitud</a>
+                      </div>
+                      <div class="card-footer text-muted">
+                        Meet2Play
+                      </div>
+                  </div>
+
+
+                </div>
+                <?php $cont = 1; } 
+              ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+<?php }?>
+<!-- <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php'; } ?> -->

@@ -1,38 +1,25 @@
-<div id="modal" class="modal">
 
-    <div class="modal-content">
-    
-        <div class="modal-header">
-        	<span>AVISO</span>
-        	<a class="close"><i class="fa fa-times"></i></a>
-        </div>
-        
-        <div class="modal-body">
-        	<div><p><?php if(isset($estado)){echo $estado;}?></p></div>
-        	
-        	
-        	<!-- div>
-            	<button id="si" name="si" value="1">Si</button>
-            	<button class="cancelar" name="cancelar" value="0">Cancelar</button>
-        	</div-->
-        	
-        </div>
-           
-    </div>
-</div>
 
-<script>
-    $(document).ready(function() {
-    	$('.close').on('click', function() {
-    		$('#modal').hide();
-    	});
-    	
-    	$('.no').on('click', function() {
-    		$('#modal').hide();
-    	});
+<div class="modal fade" id="dialogo1">
+      <div class="modal-dialog">
+        <div class="modal-content">
     
-    	$('.cancelar').on('click', function() {
-    		$('#modal').hide();
-    	});
-    });
-</script>
+          <!-- cabecera del diálogo -->
+          <div class="modal-header">
+            <h4 class="modal-title">Error</h4>
+            <button type="button" class="close" data-dismiss="modal">X</button>
+          </div>
+
+          <!-- cuerpo del diálogo -->
+          <div class="modal-body">
+            <?php echo $estado; ?>
+          </div>
+    
+          <!-- pie del diálogo -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+    
+        </div>
+      </div>
+    </div> 
