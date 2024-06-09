@@ -60,12 +60,12 @@
 </div>
 <?php } ?>
 
-<?php if(isset($_GET['ver'])){ ?>
+<?php if(isset($_GET['ver'])){ 
+if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
   <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
-  <div class= "container">
-
-  <div class="row justify-content-center align-items-center vh-100">
-        <div class="col-sm-6 p-3 mt-5">
+    <div class= "container">
+        <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-sm-6">
           <div id="carouselExampleCaptions2" class=" carousel-dark carousel slide" data-bs-ride="carousel">
             
             <div class="carousel-inner">
@@ -83,15 +83,16 @@
                   
 
 
-                  <div class="card text-center rounded-2 border-3" style="background-color:#7fc6f5; border-color:#674EA7;"; >
-                      <div class="card-header">
+                  <div class="card text-center rounded-2 border-5" style="background-color:#7fc6f5; border-color:#674EA7;"; >
+                      <div class="card-header p-3" style="color:#674EA7;">
                         Solicitud número <?php echo $solicitud['id'] ?>
                       </div>
-                      <div class="card-boitle">Ofrezco: <?php echo $tocaidstring[$solicitud['tocaid']]['nombre']?></h5>
-                        <p class="card-text">Necesito: <?php echo $necesitaidstring[$solicitud['necesitaid']]['nombre']?> </p>
+                      <div class="card-boitle pt-3" style="color:#674EA7; background-color:#C39BD3 !important;">
+                        <h5 class="card-text" style="color:#674EA7;">Ofrezco: <?php echo $tocaidstring[$solicitud['tocaid']]['nombre']?> </h5>
+                        <h5 class="card-text" style="color:#674EA7;">Necesito: <?php echo $necesitaidstring[$solicitud['necesitaid']]['nombre']?> </h5>
                         <a href="index.php?option=solicitudes&ver=true&cancelar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Cancelar Solicitud</a>
                       </div>
-                      <div class="card-footer text-muted">
+                      <div class="card-footer p-3" style="color:#674EA7;">
                         Meet2Play
                       </div>
                   </div>
@@ -114,6 +115,36 @@
     </div>
     </section>
 </div>
-
-<?php }?>
+<?php }else { ?>
+  <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+    <div class= "container">
+      <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-sm-6 p-3 mt-5">
+          <!-- <div class="card text-center rounded-2 border-3" style="background-color:#7fc6f5; border-color:#674EA7;"; >
+            <div class="card-header">
+              No has enviado ninguna solicitud
+            </div>
+            <div class="card-boitle">
+              <a href="index.php?option=solicitudes&enviar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Enviar Solicitud</a>
+            </div>
+            <div class="card-footer text-muted">
+              Meet2Play
+            </div>
+          </div> -->
+          <div class="card text-center rounded-2 border-5" style="background-color:#7fc6f5; border-color:#674EA7;"; >
+                      <div class="card-header p-3 h5" style="color:#674EA7;">
+                        No se ha enviado ninguna solicitud
+                      </div>
+                      <div class="card-boitle" style="color:#674EA7; background-color:#C39BD3 !important;">
+                        <a href="index.php?option=solicitudes&enviar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Enviar Solicitud</a>
+                      </div>
+                      <div class="card-footer p-3" style="color:#674EA7;">
+                        Meet2Play
+                      </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+</section>
+<?php } }?>
 <!-- <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php'; } ?> -->
