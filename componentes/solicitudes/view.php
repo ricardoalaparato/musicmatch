@@ -73,16 +73,6 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
                 $cont=0; 
                 foreach ($solicitudes as $solicitud) { ?>
                 <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
-                  <!-- <div class="card rounded-2 text-dark border-3 mb-3" style="width: 50 rem; background-color:#7fc6f5; border-color:#674EA7;";>
-                      <img class="card-img-top" src="img/fichas/6.jpg" alt="Card image cap">
-                      <div class="card-body text-center">
-                        <h3 class="card-text" style="color:#674EA7;">Solicitud número </h3>
-                        <h5 class="card-text" style="color:#f8da67;"></h5>
-                        <h5 class="card-text" style="color:#f8da67;"></h5>
-                      </div> -->
-                  
-
-
                   <div class="card text-center rounded-2 border-5" style="background-color:#7fc6f5; border-color:#674EA7;"; >
                       <div class="card-header p-3" style="color:#674EA7;">
                         Solicitud número <?php echo $solicitud['id'] ?>
@@ -96,8 +86,6 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
                         Meet2Play
                       </div>
                   </div>
-
-
                 </div>
                 <?php $cont = 1; } 
               ?>

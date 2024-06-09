@@ -3,22 +3,22 @@
   <div class="container">
     <div class="row p-5">
       <div class="col m-3">
-        <div class="card text-center" >
+        <div class="card text-center border-5" style="border-color:#674EA7;" >
           <img src="img\fichas\14.png" class="card-img-top" alt="...">
           <div class="card-body" style="background-color:  #f1c40f ;">
             <h2 class="card-title mt-4">¿Sois un grupo...</h2>
             <h4 class="card-text">y os falta algún instrumento?</h4>
-            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4" style="background-color:#63ADF0; color:white;">Ven a Meet2Play</a>
+            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4 border-1" style="background-color:#63ADF0; color:white;border-color:#674EA7 !important;">Ven a Meet2Play</a>
           </div>
         </div>
       </div>
       <div class="col m-3">
-        <div class="card text-center">
+        <div class="card text-center border-5" style="border-color:#674EA7;" >
           <img src="img\fichas\2.png" class="card-img-top" alt="...">
           <div class="card-body" style="background-color: #f1c40f ;">
             <h2 class="card-title mt-4">¿Tocas algún instrumento...</h2>
             <h4 class="card-text">y estás buscando un grupo?</h4>
-            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4" style="background-color:#63ADF0; color:white;">Ven a Meet2Play</a>
+            <a href="index.php?option=usuarios&registro=true" class="btn p-2 m-4 border-1" style="background-color:#63ADF0; border-color:#674EA7 !important; color:white;">Ven a Meet2Play</a>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
               <div class="card-body">
                 <h5 class="card-title text-center" style="color:#674EA7;"><?php echo $usuario['nick'] ?></h5>
                 <h6 class="card-subtitle mb-2  text-center text-muted"><?php echo $usuarioinstrumento['nombre'] ?></h6>
-                <p class="card-text p-2 ml-2 text-center" style="color:#f8da67;"><?php echo $usuario['descripcion'] ?></p>
+                <p class="card-text p-2 ml-2 text-center" style="color:#e1e6e7;"><?php echo $usuario['descripcion'] ?></p>
               </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                       <img class="card-img-top" src="img/fichas/<?php echo $restousuario['rutaimagen'] ?>" alt="Card image cap">
                       <div class="card-body text-center">
                         <h3 class="card-text" style="color:#674EA7;"><?php echo $restousuario['nick'] ?></h3>
-                        <h5 class="card-text" style="color:#f8da67;"><?php echo $esidstring[$restousuario['esid']]['nombre']?></h5>
+                        <h5 class="card-text" style="color:#e1e6e7;"><?php echo $esidstring[$restousuario['esid']]['nombre']?></h5>
                       </div>
                   </div>
                   

@@ -30,11 +30,22 @@ class modelSolicitudes {
         $db = new database();
         $sql = "DELETE FROM solicitudes WHERE id = :id";
         $params = array(
-        ':id'        => $id
+            ':id'        => $id
         );
         $db->query($sql, $params);
         return $db->affectedRows();
-    }   
+    }  
+    
+    public static function meet($id) {
+        $db = new database();
+        $sql ="";
+        $params = array(
+            ':id'  => $id
+        );
+        $db->query($sql, $params);
+        return $db->cargaMatriz();
+
+    }
 
 
 }
