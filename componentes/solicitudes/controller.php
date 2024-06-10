@@ -47,16 +47,24 @@ if(isset($_GET['ver'])) {
         }
         if(isset($_GET['cancelar'])) {
             if($estado == '' && modelSolicitudes::cancelarSolicitud($solicitud['id']) == 1) {
-                // header('Location: index.php?ver=true');
-                print_r ($solicitud);
+                header('Location: index.php?ver=true');
+                // print_r ($solicitud);
             } else {
               $estado .= ' Error - La actualizacion ha fallado';
               echo ($estado) ;
-        }
+            }
         }
     
     
     }
+if(isset($_GET['meet'])) {
+    $meets = modelSolicitudes::meets($usuarioid);
+    foreach ($meets as $meet){
+       
+    }
+
+
+}
     
 
 

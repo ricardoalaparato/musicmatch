@@ -36,9 +36,13 @@ class modelSolicitudes {
         return $db->affectedRows();
     }  
     
-    public static function meet($id) {
+    public static function meets($id) {
         $db = new database();
-        $sql ="";
+        $sql ="SELECT usuarios.nick, usuarios.email, usuarios.descripcion, usuarios.rutaimagen, pide.necesitaid, pide.tocaid FROM solicitudes AS pide, solicitudes AS ofrece, usuarios WHERE
+            ofrece.usuarioid = 2 /* usuario activo */ AND 
+            pide.necesitaid = ofrece.tocaid AND
+            pide.tocaid = ofrece.necesitaid AND
+            usuarios.id = pide.usuarioid";
         $params = array(
             ':id'  => $id
         );

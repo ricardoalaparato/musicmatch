@@ -61,6 +61,7 @@
 <?php } ?>
 
 <?php if(isset($_GET['ver'])){ 
+
 if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
   <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
     <div class= "container">
@@ -135,4 +136,12 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
     </div>
 </section>
 <?php } }?>
+
+<?php if(isset($_GET['meet'])){
+  if(isset($meets) AND ($meets != NULL)) { print_r($meets);
+    
+
+
+ } } ?>
+
 <!-- <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php'; } ?> -->

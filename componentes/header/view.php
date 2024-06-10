@@ -20,7 +20,7 @@
                                     <li><a class="dropdown-item" style="color:#674EA7;" href="index.php?option=solicitudes&ver=true">Ver Solicitudes</a></li>
                                     <li><a class="dropdown-item" style="color:#674EA7;" href="index.php?option=solicitudes&enviar=true">Enviar Solicitud</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" style="color:#674EA7;" href="#">Meets</a></li>
+                                    <li><a class="dropdown-item" style="color:#674EA7;" href="index.php?option=solicitudes&meet=true">Meets</a></li>
                                 </ul>
                             </li>
                             <?php } else {?>
