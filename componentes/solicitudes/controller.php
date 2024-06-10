@@ -50,7 +50,7 @@ if(isset($_GET['ver'])) {
                 header('Location: index.php?ver=true');
                 // print_r ($solicitud);
             } else {
-              $estado .= ' Error - La actualizacion ha fallado';
+              $estado .= ' Error - La cancelación ha fallado';
               echo ($estado) ;
             }
         }

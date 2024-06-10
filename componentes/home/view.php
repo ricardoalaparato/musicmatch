@@ -35,9 +35,11 @@
         <div class="col-sm-8 mt-5 ">          
             <div class="card w-100 border-3 rounded-pill" style="background-color:#7fc6f5; border-color:#674EA7;" >
               <div class="card-body">
-                <h5 class="card-title text-center" style="color:#674EA7;"><?php echo $usuario['nick'] ?></h5>
-                <h6 class="card-subtitle mb-2  text-center text-muted"><?php echo $usuarioinstrumento['nombre'] ?></h6>
-                <p class="card-text p-2 ml-2 text-center" style="color:#e1e6e7;"><?php echo $usuario['descripcion'] ?></p>
+                <h3 class="card-title text-center" style="color:#674EA7;"><?php echo $usuario['nick'] ?></h3>
+                <?php if ($_SESSION['usuario']['rolid'] > 1 ) {?>
+                  <h6 class="card-subtitle mb-2  text-center text-muted"><?php echo $usuarioinstrumento['nombre'] ?></h6>
+                  <p class="card-text p-2 ml-2 text-center" style="color:#e1e6e7;"><?php echo $usuario['descripcion'] ?></p>
+                <?php } ?>
               </div>
             </div>
         </div>
@@ -56,6 +58,9 @@
                       <div class="card-body text-center">
                         <h3 class="card-text" style="color:#674EA7;"><?php echo $restousuario['nick'] ?></h3>
                         <h5 class="card-text" style="color:#e1e6e7;"><?php echo $esidstring[$restousuario['esid']]['nombre']?></h5>
+                        <?php if ($_SESSION['usuario']['rolid'] == 1 ) { ?>
+                          <a href="index.php?option=gestion&eliminar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Eliminar usuario</a>
+                        <?php } ?>
                       </div>
                   </div>
                   
