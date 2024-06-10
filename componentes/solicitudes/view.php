@@ -138,10 +138,48 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
 <?php } }?>
 
 <?php if(isset($_GET['meet'])){
-  if(isset($meets) AND ($meets != NULL)) { print_r($meets);
-    
+  if(isset($meets) AND ($meets != NULL)) { print_r($meets); ?>
+    <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+      <div class= "container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-sm-4 p-3">
+          <div id="carouselExampleCaptions" class=" carousel-dark carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-inner">
+              <?php
+                $cont=0; 
+                foreach ($meets as $meet) { ?>
+                <div class="carousel-item <?php echo $cont == 0?"active":"" ?>">
+                  <div class="card rounded-2 text-dark border-3 mb-3" style="width: 50 rem; background-color:#7fc6f5; border-color:#674EA7;";>
+                      <img class="card-img-top" src="img/fichas/<?php echo $meet['rutaimagen'] ?>" alt="Card image cap">
+                      <div class="card-body text-center">
+                        <h3 class="card-text" style="color:#674EA7;"><?php echo $meet['nick'] ?></h3>
+                        <h5 class="card-text" style="color:#e1e6e7;">Necesita <?php echo $necesitaidstring[$meet['necesitaid']]['nombre']?></h5>
+                        <h5 class="card-text" style="color:#e1e6e7;">Ofrece <?php echo $tocaidstring[$meet['tocaid']]['nombre']?></h5>
+                        <h5 class="card-text" style="color:#e1e6e7;">Su correo electrónico es: <?php echo $meet['email']?></h5>
+                      </div>
+                  </div>
+                  
+                </div>
+                <?php $cont = 1; } 
+              ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </div>
+      </div>
+    </section>
 
 
- } } ?>
+
+ <?php } } ?>
 
 <!-- <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php'; } ?> -->

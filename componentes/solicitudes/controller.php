@@ -42,7 +42,7 @@ if(isset($_POST['enviarsolicitud'])) {
 if(isset($_GET['ver'])) {
     $solicitudes = modelSolicitudes::mostrarSolicitudes($usuarioid);
     foreach ($solicitudes as $solicitud){
-        $tocaidstring[$solicitud['tocaid']] = modelhome::esidToString($solicitud['tocaid']);
+        $tocaidstring[$solicitud['tocaid']] = modelHome::esidToString($solicitud['tocaid']);
         $necesitaidstring[$solicitud['necesitaid']] = modelHome::esidToString($solicitud['necesitaid']);
         }
         if(isset($_GET['cancelar'])) {
@@ -60,7 +60,8 @@ if(isset($_GET['ver'])) {
 if(isset($_GET['meet'])) {
     $meets = modelSolicitudes::meets($usuarioid);
     foreach ($meets as $meet){
-       
+       $necesitaidstring[$meet['necesitaid']] = modelHome::esidToString($meet['necesitaid']);
+       $tocaidstring[$meet['tocaid']] = modelHome::esidToString($meet['tocaid']);
     }
 
 
