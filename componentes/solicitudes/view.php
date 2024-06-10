@@ -109,17 +109,6 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
     <div class= "container">
       <div class="row justify-content-center align-items-center vh-100">
         <div class="col-sm-6 p-3 mt-5">
-          <!-- <div class="card text-center rounded-2 border-3" style="background-color:#7fc6f5; border-color:#674EA7;"; >
-            <div class="card-header">
-              No has enviado ninguna solicitud
-            </div>
-            <div class="card-boitle">
-              <a href="index.php?option=solicitudes&enviar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Enviar Solicitud</a>
-            </div>
-            <div class="card-footer text-muted">
-              Meet2Play
-            </div>
-          </div> -->
           <div class="card text-center rounded-2 border-5" style="background-color:#7fc6f5; border-color:#674EA7;"; >
                       <div class="card-header p-3 h5" style="color:#674EA7;">
                         No se ha enviado ninguna solicitud
@@ -137,12 +126,12 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
 </section>
 <?php } }?>
 
-<?php if(isset($_GET['meet'])){
-  if(isset($meets) AND ($meets != NULL)) { print_r($meets); ?>
+<?php if(isset($_GET['meet'])){ print_r($meets);
+  if(isset($meets) AND ($meets != NULL)) {   ?>
     <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
       <div class= "container">
-      <div class="row justify-content-center mt-5">
-        <div class="col-sm-4 p-3">
+      <div class="row justify-content-center">
+        <div class="col-sm-4 p-3 m-5">
           <div id="carouselExampleCaptions" class=" carousel-dark carousel slide" data-bs-ride="carousel">
             
             <div class="carousel-inner">
@@ -180,6 +169,26 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
 
 
 
+ <?php } else { ?>
+      <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
+      <div class= "container">
+        <div class="row justify-content-center align-items-center vh-100">
+          <div class="col-sm-6 p-3 mt-5">
+            <div class="card text-center rounded-2 border-5" style="background-color:#7fc6f5; border-color:#674EA7;"; >
+                        <div class="card-header p-3 h5" style="color:#674EA7;">
+                          No hay Meets... De momento
+                        </div>
+                        <!-- <div class="card-boitle" style="color:#674EA7; background-color:#C39BD3 !important;">
+                          <a href="index.php?option=solicitudes&enviar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Enviar Solicitud</a>
+                        </div> -->
+                        <div class="card-footer p-3" style="color:#674EA7;">
+                          Meet2Play
+                        </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+  </section>
  <?php } } ?>
 
 <!-- <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php'; } ?> -->

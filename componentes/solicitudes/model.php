@@ -39,7 +39,7 @@ class modelSolicitudes {
     public static function meets($id) {
         $db = new database();
         $sql ="SELECT usuarios.nick, usuarios.email, usuarios.descripcion, usuarios.rutaimagen, pide.necesitaid, pide.tocaid FROM solicitudes AS pide, solicitudes AS ofrece, usuarios WHERE
-            ofrece.usuarioid = 2 /* usuario activo */ AND 
+            ofrece.usuarioid = :id /* usuario activo */ AND 
             pide.necesitaid = ofrece.tocaid AND
             pide.tocaid = ofrece.necesitaid AND
             usuarios.id = pide.usuarioid";
