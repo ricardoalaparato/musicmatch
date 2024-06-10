@@ -24,7 +24,7 @@
                                 </ul>
                             </li>
                             <?php } else {?>
-                                <a class="nav-link h3 " style="color:#674EA7;" href="#"> Perfil </a>
+                                
                                 <a class="nav-link h3 " style="color:#674EA7;" href="#"> Gestion </a>
                             <?php } ?>
                         <?php } ?>

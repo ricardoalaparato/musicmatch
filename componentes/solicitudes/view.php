@@ -126,7 +126,7 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
 </section>
 <?php } }?>
 
-<?php if(isset($_GET['meet'])){ print_r($meets);
+<?php if(isset($_GET['meet'])){
   if(isset($meets) AND ($meets != NULL)) {   ?>
     <section class="container-fluid" style="background-image: url('http://localhost/musicmatch/img/fondos/4.png') ; height: auto; background-size: 100% 100%; background-repeat: no-repeat;">
       <div class= "container">

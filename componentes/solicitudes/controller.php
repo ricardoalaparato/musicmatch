@@ -57,6 +57,7 @@ if(isset($_GET['ver'])) {
     
     
 }
+
 if(isset($_GET['meet'])) {
     $meets = modelSolicitudes::meets($usuarioid);
     foreach ($meets as $meet){
