@@ -33,8 +33,8 @@ ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_c
 
 INSERT INTO `usuarios` (`id`, `nick`, `email`, `clave`, `rolid`, `activo`, `esid`,`rutaimagen`) VALUES
 (1, 'Admin', 'admin@musicmatch.com', 'df24971a67a6b72057b0a4aea31f8e898eaa6b5539f547d5c1378b97ae48e513', 1 , 1, 1, '6.png'),
-(2, 'Pinki', 'pinki@musicmatch.com', 'pinki', 2 , 1, 1,'9.png'),
-(3, 'Cerebro', 'cerebro@musicmatch.com', 'cerebro', 2, 1, 2,'10.png'); 
+(2, 'Pinki', 'pinki@musicmatch.com', '75f34ff67a40cf4174c1272a8f584dde44c8f0f43341aa98f08b23d69e3ff46a', 2 , 1, 1,'9.png'),
+(3, 'Cerebro', 'cerebro@musicmatch.com', 'e386400da7d8e8adae192cc711d1a57cd57991308598566b100a624aee795b6b', 2, 1, 2,'10.png'); 
 
 
 -- creación tabla roles
