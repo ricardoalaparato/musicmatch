@@ -13,7 +13,6 @@
           style="height: 10rem; width: 10rem;"
         />
       </div>
-      <!-- <div class="text-center fs-1 fw-bold">Login</div> -->
       <form class="form" method="POST" action="index.php?option=solicitudes" autocomplete="off">
         <li class="input-group mt-4 border border-white rounded" style="border-color:#674EA7 !important;">
             <div class="input-group-text" style="background-color:#f8da67; color:white;">
@@ -178,9 +177,6 @@ if(isset($solicitudes) AND ($solicitudes != NULL)) { ?>
                         <div class="card-header p-3 h5" style="color:#674EA7;">
                           No hay Meets... De momento
                         </div>
-                        <!-- <div class="card-boitle" style="color:#674EA7; background-color:#C39BD3 !important;">
-                          <a href="index.php?option=solicitudes&enviar=true" class="btn btn-primary m-3 fw-semibold shadow-sm" style="background-color:#f8da67; color:#674EA7; border-color:#674EA7;">Enviar Solicitud</a>
-                        </div> -->
                         <div class="card-footer p-3" style="color:#674EA7;">
                           Meet2Play
                         </div>
