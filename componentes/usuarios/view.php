@@ -195,8 +195,7 @@
       </form>
     </div>
   <?php }; ?>
-  <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php';
-  echo $estado . 'huhu'; } ?> 
+  <?php if(isset($estado) && $estado != '') { include 'librerias/modal.php'; } ?> 
 </section> 
 </div> 
   
