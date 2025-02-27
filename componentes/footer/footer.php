@@ -69,7 +69,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
     Creado en 2024 con amor por :
-    <a class="text-body" href="https://localhost/musicmatch">musicmatch</a>
+    <a class="text-body" href="https://localhost/musicmatch">rama2</a>
   </div>
   <!-- Copyright -->
 </footer>
