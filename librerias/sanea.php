@@ -18,7 +18,7 @@ function sanea($input, $tipo, $min_long, $max_long, $regexp = '') {
             
                 switch ($tipo) {
                     case 'string':
-                        $output = filter_var($output, FILTER_SANITIZE_STRING);                        
+                        $output = filter_var($output, FILTER_SANITIZE_URL);                        
                         break;                    
                     case 'email':
                         $output = filter_var($output, FILTER_SANITIZE_EMAIL);
